@@ -1,0 +1,28 @@
+#!/bin/bash
+
+if [ $# -ne 3 ]; then
+
+RED='\033[1;31m'
+NC='\033[0m'
+printf "${RED}3 arguments are expected : {steps, fps, save_path}\n${NC}"
+
+else
+
+export PYTHONPATH=${PYTHONPATH}:/home/dhm/icu-suite/repositories/pose-estimation
+python3 /home/dhm/icu-suite/repositories/pose-estimation/datacollection/run_rs_op.py \
+        --rs-steps=${1} \
+        --rs-fps=${2} \
+        --rs-color-format="bgr8" \
+        --rs-depth-format="z16" \
+        --rs-image-width=848 \
+        --rs-image-height=480 \
+        --rs-save-data=True \
+        --rs-save-path="${3}-${2}fps" \
+        --op-net-resolution="-1x400" \
+        --op-image-width=848 \
+        --op-image-height=480 \
+        --save-heatmaps=True
+
+echo "FINISHED"
+
+fi

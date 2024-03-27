@@ -1,0 +1,3 @@
+#!/bin/bash
+
+./repositories/icu_devices/icu_devices/build/releaseall/icu_devices repositories/icu_devices/icu_devices/cfg

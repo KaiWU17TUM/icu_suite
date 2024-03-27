@@ -1,0 +1,17 @@
+#!/bin/bash
+
+cd repositories/
+
+printf "\ndigital-icu-suite-private\n"
+cd digital-icu-suite-private && git pull --rebase && cd ..
+
+printf "\nicu_devices\n"
+cd icu_devices && git pull --rebase && cd ..
+
+printf "\npose-estimation\n"
+cd pose-estimation && git pull --rebase && cd ..
+
+printf "\nrealsense-simple-wrapper\n"
+cd realsense-simple-wrapper && git pull --rebase && cd ..
+
+printf "\n"

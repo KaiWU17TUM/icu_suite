@@ -1,0 +1,3 @@
+#!/bin/bash
+
+watch -n 1 ./repositories/digital-icu-suite-private/scripts/03_temperature/check_rs_temp.sh

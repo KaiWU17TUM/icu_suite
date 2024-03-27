@@ -1,0 +1,37 @@
+#!/bin/bash
+
+if [ $# -ne 3 ]; then
+
+RED='\033[1;31m'
+NC='\033[0m'
+printf "${RED}3 arguments are expected : {steps, fps, save_path}\n${NC}"
+
+else
+
+#/home/dhm/icu-suite/repositories/realsense-simple-wrapper/rs_cpp/rs_run_devices/build/rs_run_devices \
+#        --steps ${1} \
+#        --fps ${2} \
+#        --width 848 \
+#        --height 480 \
+#        --color-format yuyv \
+#        --depth-format z16 \
+#        --save-path "${3}-${2}fps" \
+#        --reset-interval 4500 \
+#        --ir-emitter-power 300
+
+python3 /home/dhm/icu-suite/repositories/realsense-simple-wrapper/rs_py/rs_run_devices.py \
+        --rs-steps=${1} \
+        --rs-fps=${2} \
+        --rs-image-width=848 \
+        --rs-image-height=480 \
+        --rs-color-format=yuyv \
+        --rs-depth-format=z16 \
+        --rs-display-frame=0 \
+        --rs-save-data=True \
+        --rs-save-path="${3}-${2}fps" \
+        --rs-ir-emitter-power=300
+#        --rs-use-one-dev-only=True \
+
+echo "FINISHED"
+
+fi
