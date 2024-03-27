@@ -1,0 +1,16 @@
+[submodule "repositories/icu_devices"]
+	path = repositories/icu_devices
+	url = https://github.com/KaiWU17TUM/icu_devices.git
+	branch = ws1
+[submodule "repositories/digital-icu-suite"]
+	path = repositories/digital-icu-suite
+	url = https://github.com/KaiWU17TUM/digital-icu-suite.git
+	branch = ws1
+[submodule "repositories/pose-estimation"]
+	path = repositories/pose-estimation
+	url = https://github.com/KaiWU17TUM/pose-estimation.git
+	branch = ws1
+[submodule "repositories/realsense-simple-wrapper"]
+	path = repositories/realsense-simple-wrapper
+	url = https://github.com/KaiWU17TUM/realsense-simple-wrapper.git
+	branch = ws1
