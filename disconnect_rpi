@@ -1,5 +1,5 @@
 #!/bin/bash
 
-cd repositories/digital-icu-suite-private/scripts/02_run
+cd repositories/digital-icu-suite/scripts/02_run
 
 ./run_usbip stop
